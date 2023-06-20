@@ -32,6 +32,7 @@ const SSwiper = () => {
             pagination={{
               type: "fraction",
             }}
+            grabCursor={true}
             navigation={true}
             modules={[Pagination, Navigation]}
             className="mySwiper"

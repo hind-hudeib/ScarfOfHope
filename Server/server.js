@@ -11,8 +11,9 @@ const orderRouter = require('./routes/orderRouter');
 const charityMovementsRouter = require('./routes/charityMovementsRouter');
 const donorMovementsRouter = require('./routes/donorMovementsRouter');
 const statisticsRouter = require('./routes/statisticsRouter');
+const message = require('./routes/massageRouter');
 
-const dbURI = "mongodb+srv://admin:admin@cluster0.ldqpwa2.mongodb.net/?retryWrites=true&w=majority"
+const dbURI = "mongodb+srv://admin:admin@cluster0.ldqpwa2.mongodb.net/?retryWrites=true&w=majority";
 
 
 const app = express();
@@ -31,6 +32,8 @@ app.use(orderRouter);
 app.use(charityMovementsRouter);
 app.use(donorMovementsRouter);
 app.use(statisticsRouter);
+app.use(message);
+
 
 module.exports = {
   server: app,

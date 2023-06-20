@@ -28,14 +28,17 @@ const PartnershipHome = () => {
             onSwiper={setSwiperRef}
             slidesPerView={3}
             centeredSlides={true}
-            spaceBetween={30}
+            grabCursor={true}
             pagination={{
               type: "fraction",
             }}
             navigation={true}
             modules={[Pagination, Navigation]}
+            spaceBetween={30}
             className="mySwiper"
+            // initialSlide={Math.floor(items.length / 2)}
           >
+
             <SwiperSlide>
               <div className="services-card">
                 <div className="img-card">

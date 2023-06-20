@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useRef } from "react";
-import emailjs from "@emailjs/browser";
-
+import axios from "axios";
 export default function ContactUs() {
 
   useEffect(() => {
@@ -15,36 +14,34 @@ export default function ContactUs() {
     theme: ''
   });
 
-  const sendEmail = (event) => {
+
+  const sendEmail = async (event) => {
     event.preventDefault();
 
-    const email = event.target.user_name.value;
-    const user_email = event.target.user_email.value;
+    const name = event.target.user_name.value;
+    const email = event.target.user_email.value;
     const message = event.target.message.value;
+    const patternEmail = /^[A-z0-9\.]+@[A-z0-9]+\.[A-z]{3,5}$/;
 
-    if (!email || !user_email || !message) {
+    if (!email || !name || !message) {
       setMassage({ msg: 'الرجاء تعبئة جميع الحقول', theme: 'red' });
       return;
     }
 
-    emailjs
-      .sendForm(
-        "service_o4z25iw",
-        "template_dhlo5h4",
-        form.current,
-        "IuZ5ilZIX-c2uVwa7"
-      )
-      .then(
-        (result) => {
-          setMassage({ msg: 'تم إرسال رسالتك بنجاح ، سيقوم فريقنا بالاتصال بك في أقرب وقت ممكن', theme: 'green' });
-        },
-        (error) => {
-          setMassage({ msg: 'هناك شئ خاطئ، يرجى المحاولة فى وقت لاحق', theme: 'red' });
-          console.log("massage error :" + error)
-        }
-      );
-      
-    document.getElementById('form').reset();
+    if (!patternEmail.test(email)) {
+      setMassage({ msg: 'بريد الكتروني غير صالح', theme: 'red' });
+      return;
+    }
+
+    try {
+      const res = await axios.post('http://localhost:8000/message', { name, email, message });
+      console.log(res);
+      event.target.reset();
+      setMassage({ msg: 'تم إرسال رسالتك بنجاح ، سيقوم فريقنا بالاتصال بك في أقرب وقت ممكن', theme: 'green' });
+    } catch (error) {
+      setMassage({ msg: 'هناك شئ خاطئ، يرجى المحاولة فى وقت لاحق', theme: 'red' });
+      console.log(error);
+    }
   };
 
   return (

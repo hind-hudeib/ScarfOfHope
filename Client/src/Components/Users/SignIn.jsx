@@ -157,7 +157,7 @@ export default function SignIn({ updateIsLog }) {
         });
 
         localStorage.setItem("token", res.data.Token);
-        navigate("/admin");
+        navigate("/dashbaord");
         console.log(res);
 
       } catch (err) {

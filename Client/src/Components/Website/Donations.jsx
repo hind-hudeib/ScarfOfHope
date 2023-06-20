@@ -88,14 +88,13 @@ const Donations = () => {
           backgroundPosition: "50%",
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
-          height: "20rem",
+          height: "16rem",
           backgroundAttachment: "fixed",
         }}
       >
-        <div className="absolute inset-0 overflow-hidden bg-gray-600 opacity-60"></div>
-        <svg
+                <svg
           xmlns="http://www.w3.org/2000/svg"
-          preserveAspectRatio="none"
+          preserveAspectRatio="xMidYMax meet"
           viewBox="0 0 283.5 19.6"
         >
           <path
@@ -118,6 +117,7 @@ const Donations = () => {
             className="main-bk-green"
           ></path>
         </svg>
+        <div className="absolute inset-0 overflow-hidden bg-gray-600 opacity-60"></div>
       </div>
 
       {/* Filter */}
@@ -214,10 +214,7 @@ const Donations = () => {
 
                   <span> عدد القطع : {item.number_pieces} </span>
                   <Link
-                    to={{
-                      pathname: `/donations_details/${item._id}`,
-                      search: "charity",
-                    }}
+                    to={{ pathname: `/donations_details/${item._id}`, search: "charity" }}
                     className="mt-4 rounded-md bg-white border-2 border-teal-700 px-4 py-2.5 text-sm font-medium text-teal-700 hover:text-white transition hover:bg-teal-700 flex justify-center"
                   >
                     عرض
