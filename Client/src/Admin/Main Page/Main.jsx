@@ -1,7 +1,6 @@
-
-import { useEffect} from 'react';
-import {useNavigate }from 'react-router-dom'
-import axios from 'axios';
+import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
 import { Stats } from "./Stats";
 import { TableOfDonors } from "../Donors Page/TableOfDonors";
 import { TableOfBeneficiaries } from "../Beneficiaries Page/TableOfBeneficiaries";
@@ -12,7 +11,7 @@ import { TableOfAssociationRequests } from "../Association requests/TableOfAssoc
 export const Main = () => {
   const navigate = useNavigate();
 
-  const verifyToken= async (role) => {
+  const verifyToken = async (role) => {
     const token = localStorage.getItem("token") || "";
 
     try {
@@ -24,8 +23,7 @@ export const Main = () => {
 
       if (res.data.role !== role) {
         navigate("/*");
-      } 
-        
+      }
     } catch (err) {
       console.log(err);
       navigate("/*");

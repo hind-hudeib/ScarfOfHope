@@ -1,11 +1,10 @@
-import React, { useEffect } from 'react'
-import './../../CSS/About.css'
-import './../../CSS/Idea.css'
-import IdeaImage from '../../Images/Idea.png'
-import aboutimage from '../../Images/aboutus.jpg'
-
+import React, { useEffect } from "react";
+import "./../../CSS/About.css";
+import "./../../CSS/Idea.css";
+import IdeaImage from "../../Images/Idea.png";
+import aboutimage from "../../Images/aboutus.jpg";
+import hind from "../../Images/hindh.png";
 export default function AboutUs() {
-
   // useEffect(() => {
   //   window.scrollTo(0, 0);
   // }, []);
@@ -15,13 +14,34 @@ export default function AboutUs() {
       <div className="2xl:container 2xl:mx-auto lg:py-16 lg:px-20 md:py-12 md:px-6 py-9 px-4">
         <div className="flex flex-col lg:flex-row justify-between gap-8">
           <div className="w-full lg:w-5/12 flex flex-col justify-center">
-            <h1 className="text-3xl lg:text-4xl font-bold leading-9 text-gray-800 pb-4" dir="rtl">عنا </h1>
-            <p className="font-normal text-base leading-6 text-gray-600 " dir="rtl">وشاح الامل هو منصة إلكترونية تهدف إلى جمع الملابس المستخدمة أو الجديدة من الأفراد وتوزيعها على الأشخاص المحتاجين أو المجتمعات ذات الدخل المحدود. يعد هذا الموقع وسيلة مريحة للمتبرعين للتخلص من الملابس الغير مرغوب فيها وتوجيهها إلى الأشخاص الذين يحتاجونها بدلاً من التخلص منها.
-
-              تتم عملية التبرع عبر الموقع بشكل سهل وبسيط. يمكن للأفراد تسجيل حساب مجاني على الموقع وملء بعض المعلومات الأساسية. بعد ذلك، يتمكن المتبرعون من إضافة التفاصيل حول الملابس التي يودون التبرع بها، مثل النوع، والحجم، والحالة (جديدة أو مستعملة). يمكن أيضًا تحميل صور للملابس لتوضيح مظهرها وحالتها العامة.</p>
+            <h1
+              className="text-3xl lg:text-4xl font-bold leading-9 text-gray-800 pb-4"
+              dir="rtl"
+            >
+              عنا{" "}
+            </h1>
+            <p
+              className="font-normal text-base leading-6 text-gray-600 "
+              dir="rtl"
+            >
+              وشاح الامل هو منصة إلكترونية تهدف إلى جمع الملابس المستخدمة أو
+              الجديدة من الأفراد وتوزيعها على الأشخاص المحتاجين أو المجتمعات ذات
+              الدخل المحدود. يعد هذا الموقع وسيلة مريحة للمتبرعين للتخلص من
+              الملابس الغير مرغوب فيها وتوجيهها إلى الأشخاص الذين يحتاجونها
+              بدلاً من التخلص منها. تتم عملية التبرع عبر الموقع بشكل سهل وبسيط.
+              يمكن للأفراد تسجيل حساب مجاني على الموقع وملء بعض المعلومات
+              الأساسية. بعد ذلك، يتمكن المتبرعون من إضافة التفاصيل حول الملابس
+              التي يودون التبرع بها، مثل النوع، والحجم، والحالة (جديدة أو
+              مستعملة). يمكن أيضًا تحميل صور للملابس لتوضيح مظهرها وحالتها
+              العامة.
+            </p>
           </div>
           <div className="w-full lg:w-8/12 ">
-            <img className="w-full h-full" src={aboutimage} alt="A group of People" />
+            <img
+              className="w-full h-full"
+              src={aboutimage}
+              alt="A group of People"
+            />
           </div>
         </div>
 
@@ -29,21 +49,25 @@ export default function AboutUs() {
           {/* Container for demo purpose */}
           <div className="container my-24 mx-auto md:px-6">
             {/* Section: Design Block */}
-            <section className="mb-32 text-center">
+            <section className="mx-auto mb-32 text-center ">
               <h2 className="mb-12 text-3xl font-bold">
                 فريقنا <u className="text-primary dark:text-primary-400"></u>
               </h2>
-              <div className="lg:gap-xl-12 grid gap-x-6  gap-y-52 sm:gap-y-38  md:grid-cols-2 lg:grid-cols-4">
-                <div className="mb-12 lg:mb-0" style={{height: '150px'}}>
+              <div className="mx-auto lg:gap-xl-12 grid gap-x-6  gap-y-52 sm:gap-y-38  md:grid-cols-2 lg:grid-cols-4">
+                <div className="mb-12 lg:mb-0" style={{ height: "150px" }}>
                   <img
                     className="mx-auto mb-6 rounded-lg shadow-lg dark:shadow-black/20 w-[150px]"
                     src="https://cdn.discordapp.com/attachments/1118818677110866012/1119979426977943562/profile-pic..png"
-                    alt="avatar" style={{height: '100%'}}
+                    alt="avatar"
+                    style={{ height: "100%" }}
                   />
                   <h5 className="mb-4 text-lg font-bold">عمر حسونة</h5>
                   <p className="mb-6">مطور ويب</p>
                   <ul className="mx-auto flex list-inside justify-center">
-                    <a href="https://github.com/OmarHassouna-PS" className="px-2">
+                    <a
+                      href="https://github.com/OmarHassouna-PS"
+                      className="px-2"
+                    >
                       {/* GitHub */}
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -56,8 +80,11 @@ export default function AboutUs() {
                         />
                       </svg>
                     </a>
-                  
-                    <a href="https://www.linkedin.com/in/omar-hassouna-97b76b1aa/" className="px-2">
+
+                    <a
+                      href="https://www.linkedin.com/in/omar-hassouna-97b76b1aa/"
+                      className="px-2"
+                    >
                       {/* Linkedin */}
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -72,11 +99,12 @@ export default function AboutUs() {
                     </a>
                   </ul>
                 </div>
-                <div className="mb-12 lg:mb-0" style={{height: '150px'}}>
+                <div className="mb-12 lg:mb-0" style={{ height: "150px" }}>
                   <img
                     className="mx-auto mb-6 rounded-lg shadow-lg dark:shadow-black/20 w-[150px]"
                     src="https://cdn.discordapp.com/attachments/1093684184775659631/1119980731603636295/1567681432510-removebg-preview.png"
-                    alt="avatar" style={{height: '100%'}}
+                    alt="avatar"
+                    style={{ height: "100%" }}
                   />
                   <h5 className="mb-4 text-lg font-bold">علي الطيراوي</h5>
                   <p className="mb-6">مطور ويب</p>
@@ -94,8 +122,11 @@ export default function AboutUs() {
                         />
                       </svg>
                     </a>
-                   
-                    <a href="https://www.linkedin.com/in/ali-al-terawi-332603181/" className="px-2">
+
+                    <a
+                      href="https://www.linkedin.com/in/ali-al-terawi-332603181/"
+                      className="px-2"
+                    >
                       {/* Linkedin */}
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -110,16 +141,17 @@ export default function AboutUs() {
                     </a>
                   </ul>
                 </div>
-                <div className="mb-12 md:mb-0" style={{height: '150px'}}>
+                <div className="mb-12 md:mb-0" style={{ height: "150px" }}>
                   <img
                     className="mx-auto mb-6 rounded-lg shadow-lg dark:shadow-black/20 w-[150px]"
                     src="https://cdn.discordapp.com/attachments/1087291162840281098/1119982029526802492/ME.png"
-                    alt="avatar" style={{height: '100%'}}
+                    alt="avatar"
+                    style={{ height: "100%" }}
                   />
                   <h5 className="mb-4 text-lg font-bold">عصام عدي</h5>
                   <p className="mb-6">مطور ويب</p>
                   <ul className="mx-auto flex list-inside justify-center">
-                  <a href="https://github.com/Issam-Addi" className="px-2">
+                    <a href="https://github.com/Issam-Addi" className="px-2">
                       {/* GitHub */}
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -147,16 +179,17 @@ export default function AboutUs() {
                     </a>
                   </ul>
                 </div>
-                <div className="mb-12 md:mb-0" style={{height: '150px'}}>
+                <div className="mb-12 md:mb-0" style={{ height: "150px" }}>
                   <img
                     className="mx-auto mb-6 rounded-lg shadow-lg dark:shadow-black/20 w-[150px]"
-                    src="https://cdn.discordapp.com/attachments/1119217702968508417/1120059030778425496/EB3E9053-B8B1-4203-9602-FC791C2FF8AC.jpg"
-                    alt="avatar" style={{height: '100%'}}
+                    src={hind}
+                    alt="avatar"
+                    style={{ height: "100%" }}
                   />
                   <h5 className="mb-4 text-lg font-bold">هند هديب</h5>
                   <p className="mb-6">مطورة ويب</p>
                   <ul className="mx-auto flex list-inside justify-center">
-                  <a href="https://github.com/hind-hudeib" className="px-2">
+                    <a href="https://github.com/hind-hudeib" className="px-2">
                       {/* GitHub */}
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -169,7 +202,10 @@ export default function AboutUs() {
                         />
                       </svg>
                     </a>
-                    <a href="https://www.linkedin.com/in/hind-hudeib/" className="px-2">
+                    <a
+                      href="https://www.linkedin.com/in/hind-hudeib/"
+                      className="px-2"
+                    >
                       {/* Linkedin */}
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -184,16 +220,17 @@ export default function AboutUs() {
                     </a>
                   </ul>
                 </div>
-                <div className="mb-12 lg:mb-0" style={{height: '150px'}}>
+                <div className="mb-12 lg:mb-0" style={{ height: "150px" }}>
                   <img
                     className="mx-auto mb-6 rounded-lg shadow-lg dark:shadow-black/20 w-[150px]"
                     src="https://cdn.discordapp.com/attachments/1118818677110866012/1120063245219274783/ahmed2.jpg"
-                    alt="avatar" style={{height: '100%'}}
+                    alt="avatar"
+                    style={{ height: "100%" }}
                   />
                   <h5 className="mb-4 text-lg font-bold">احمد ابو غوش</h5>
                   <p className="mb-6">مطور ويب</p>
                   <ul className="mx-auto flex list-inside justify-center">
-                  <a href="#" className="px-2">
+                    <a href="#" className="px-2">
                       {/* GitHub */}
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -206,7 +243,10 @@ export default function AboutUs() {
                         />
                       </svg>
                     </a>
-                    <a href="https://www.linkedin.com/in/ahmad-abughaush-243238204/" className="px-2">
+                    <a
+                      href="https://www.linkedin.com/in/ahmad-abughaush-243238204/"
+                      className="px-2"
+                    >
                       {/* Linkedin */}
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -221,11 +261,12 @@ export default function AboutUs() {
                     </a>
                   </ul>
                 </div>
-                <div className="mb-12 lg:mb-0" style={{height: '150px'}}>
+                <div className="mb-12 lg:mb-0" style={{ height: "150px" }}>
                   <img
                     className="mx-auto mb-6 rounded-lg shadow-lg dark:shadow-black/20 w-[150px]"
                     src="https://cdn.discordapp.com/attachments/1082309541145890927/1120248013957374033/WhatsApp_Image_2023-05-27_at_4.25.41_AM_1.jpeg"
-                    alt="avatar" style={{height: '100%'}}
+                    alt="avatar"
+                    style={{ height: "100%" }}
                   />
                   <h5 className="mb-4 text-lg font-bold">وسام احمد</h5>
                   <p className="mb-6">مطورة ويب</p>
@@ -243,7 +284,10 @@ export default function AboutUs() {
                         />
                       </svg>
                     </a>
-                    <a href="https://www.linkedin.com/in/wesamahmad/" className="px-2">
+                    <a
+                      href="https://www.linkedin.com/in/wesamahmad/"
+                      className="px-2"
+                    >
                       {/* Linkedin */}
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -258,16 +302,17 @@ export default function AboutUs() {
                     </a>
                   </ul>
                 </div>
-                <div className="mb-12 md:mb-0"style={{height: '150px'}} >
+                <div className="mb-12 md:mb-0" style={{ height: "150px" }}>
                   <img
                     className="mx-auto mb-6 rounded-lg shadow-lg dark:shadow-black/20 w-[150px]"
                     src="https://media.licdn.com/dms/image/D4E03AQG8TOgUYvuYMA/profile-displayphoto-shrink_200_200/0/1673285590063?e=1692835200&v=beta&t=OAnMfkmbirGeVH6NHHliy5meu3axkZg7GTAkULa4flo"
-                    alt="avatar" style={{height: '100%'}}
+                    alt="avatar"
+                    style={{ height: "100%" }}
                   />
                   <h5 className="mb-4 text-lg font-bold">محمد زايد</h5>
                   <p className="mb-6">مطور ويب</p>
                   <ul className="mx-auto flex list-inside justify-center">
-                  <a href="#" className="px-2">
+                    <a href="#" className="px-2">
                       {/* GitHub */}
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
