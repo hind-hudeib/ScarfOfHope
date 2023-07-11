@@ -18,16 +18,6 @@ The ScarfOfHope website offers the following features:
 
 - Administrative Dashboard: Administrators have access to a dedicated dashboard where they can manage donations, monitor the matching process, and communicate with users.
 
-## our team
-
-- Omar Hassouna
-- Ali Alterawe
-- Mohammad Zayed
-- Hind Hudeib
-- Essam Addi
-- Wesam Ahmad
-- Ahmad Abughaush
-
 ## mockup and wireframe
 
 [mockup and wireframe](https://www.figma.com/file/I1tQ8rrUnRfGgapVAbk4vF/G1?type=design&node-id=0%3A1&t=OCupiWarAtJkMz4t-1)
